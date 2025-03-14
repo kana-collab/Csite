@@ -115,11 +115,11 @@ const DemoProduct = (props) => {
             <div>
                 <NavBar />
             </div>
-            <div id='demo' className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24">
-                <div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
+            <div id='demo' className="flex flex-col justify-center items-center mt-8 w-full bg-white py-12 lg:py-24">
+                <div className="container mx-auto my-8 px-4 sm:px-6 lg:px-20" data-aos="zoom-in">
                     <form onSubmit={sendEmail} id="demoProductForm">
                         <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
-                            <div className="flex">
+                            <div className="flex flex-col lg:flex-row">
                                 <h1 className="font-bold text-center lg:text-left text-blue-900 uppercase text-4xl">Demo our products</h1>
                             </div>
                             <div className="flex items-center my-4">
@@ -134,33 +134,33 @@ const DemoProduct = (props) => {
                             </div>
                             <div className="flex items-center my-4">
                                 <input 
-                                    id="checkbox-1" 
-                                    aria-describedby="checkbox-1" 
+                                    id="checkbox-2" 
+                                    aria-describedby="checkbox-2" 
                                     type="checkbox" 
                                     className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded"
                                     value="school_management_portal" onChange={handleChange}
                                     />
-                                <label htmlFor="checkbox-1" className="ml-3 text-lg font-medium text-gray-900">School Management Portal</label>
+                                <label htmlFor="checkbox-2" className="ml-3 text-lg font-medium text-gray-900">School Management Portal</label>
                             </div>
                             <div className="flex items-center my-4">
                                 <input 
-                                    id="checkbox-1" 
-                                    aria-describedby="checkbox-1" 
+                                    id="checkbox-3" 
+                                    aria-describedby="checkbox-3" 
                                     type="checkbox" 
                                     className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" 
                                     value="payroll_management_system" onChange={handleChange}
                                 />
-                                <label htmlFor="checkbox-1" className="ml-3 text-lg font-medium text-gray-900">Payroll Management System</label>
+                                <label htmlFor="checkbox-3" className="ml-3 text-lg font-medium text-gray-900">Payroll Management System</label>
                             </div>
                             <div className="flex items-center my-4">
                                 <input 
-                                    id="checkbox-1" 
-                                    aria-describedby="checkbox-1" 
+                                    id="checkbox-4" 
+                                    aria-describedby="checkbox-4" 
                                     type="checkbox" 
                                     className="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded"
                                     value="event_management_system" onChange={handleChange}
                                 />
-                                <label htmlFor="checkbox-1" className="ml-3 text-lg font-medium text-gray-900">Event Management System</label>
+                                <label htmlFor="checkbox-4" className="ml-3 text-lg font-medium text-gray-900">Event Management System</label>
                             </div>
                             {errors && 
                                 <p className="text-red-500 text-sm">{errors.products}</p>
@@ -240,7 +240,7 @@ const DemoProduct = (props) => {
                                 <p className="text-red-500 text-sm">{errors.message}</p>
                             }
                         </div>
-                        <div className="my-2 w-1/2 lg:w-2/4">
+                        <div className="my-2 w-full lg:w-2/4">
                             <button type="submit" id="submitBtn" className="uppercase text-sm font-bold tracking-wide bg-gray-500 hover:bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
                                     focus:outline-none focus:shadow-outline">
                                 Send Message
@@ -248,7 +248,7 @@ const DemoProduct = (props) => {
                         </div>
                     </div>
                     </form>
-                    <div className="w-full  lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
+                    <div className="w-full lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
                         <div className="flex flex-col text-white">     
                             <div className="flex my-4 w-2/3 lg:w-3/4">
                                 <div className="flex flex-col">
