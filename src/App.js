@@ -5,7 +5,8 @@ import './index.css';
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useLocation,
 } from 'react-router-dom';
 // All pages
 import Home from './pages/Home';
@@ -16,6 +17,8 @@ import {useDocTitle} from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
+   // Add this line to get the current location
+
   useEffect(() => {
     const aos_init = () => {
       AOS.init({
@@ -30,7 +33,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("MLD | Molad e Konsult - Bespoke Web and Mobile Applications");
+  useDocTitle("D A C | Dev Alliance Company - Web and Mobile Applications");
 
   return (
     <>
@@ -38,7 +41,7 @@ function App() {
         <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />            
             <Route path="/get-demo" element={<DemoProduct />} /> 
           </Routes>
         </ScrollToTop>

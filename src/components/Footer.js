@@ -12,14 +12,13 @@ const Footer = () => {
                     <div className="grid sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
 
                     {/* 1st block */}
-                    <div className="col-span-12 lg:col-span-4">
-                        <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
-                            <h3 className="font-bold text-4xl mb-4">MLD</h3>
-                            <div className='text-md font-medium text-gray-600'>
-                                <h5>Molad e Konsult</h5>
-                                <p>Ilo Awela,</p>
-                                <p>Ota,</p>
-                                <p>Ogun State.</p>
+                    <div className="col-span-15 lg:col-span-4">
+                        <div className="box-border p-8 bg-white-800 text-black-600 text-center rounded-lg xl:w-80 mx-auto">
+                            <h3 className="font-bold text-4xl mb-4 text-blue-900">D A C</h3>
+                            <div className='text-md font-medium text-blue-900'>
+                                <h5>Dev Alliance Company</h5>
+                                <p>+1 586-346-2732</p>
+                                <p><a href="mailto:dev.alliance.company@gmail.com">dev.alliance.company@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -29,13 +28,13 @@ const Footer = () => {
                         <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
+                            <HashLink to="#about" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
+                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
+                            <HashLink to="#contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
                         </li>                            
                         </ul>
                     </div>
@@ -95,10 +94,10 @@ const Footer = () => {
                     <div className="text-sm text-gray-200 font-semibold py-1">
                     Copyright &copy; {new Date().getFullYear()}{"  "}
                     <HashLink
-                        to="#"
+                        to="#hero"
                         className=" hover:text-gray-900"
                     >
-                        Molad e Konsult
+                        Dev Alliance Company
                     </HashLink>. All rights reserved.
                     </div>
                 </div>
