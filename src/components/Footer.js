@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
 
                     {/* 1st block */}
-                    <div className="col-span-1 sm:col-span-12 lg:col-span-4">
+                    <div className="col-span-1 sm:col-span-6 lg:col-span-1">
                         <div className="box-border p-8 bg-white-800 text-black-600 text-center rounded-lg xl:w-80 mx-auto">
                             <h3 className="font-bold text-4xl mb-4 text-blue-900">D A C</h3>
                             <div className='text-md font-medium text-blue-900'>
@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
 
                     {/* 2nd block */}
-                    <div className="col-span-1 sm:col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
+                    <div className="col-span-1 sm:col-span-6 md:col-span-6 lg:col-span-1 mx-auto">
                         <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
                         <ul className="text-md">
                         <li className="mb-2">
@@ -44,16 +44,16 @@ const Footer = () => {
                         <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Web Development</Link>
+                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Web Development</HashLink>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Mobile App Development</Link>
+                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Mobile App Development</HashLink>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Domain and Hosting</Link>
+                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Domain and Hosting</HashLink>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">General IT Consultations</Link>
+                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">General IT Consultations</HashLink>
                         </li>
                         </ul>
                     </div>

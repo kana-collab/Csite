@@ -10,14 +10,14 @@ import Work from '../components/work';
 
 const Home = () => {
     return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <>
             <Hero />
             <Intro />
             <Services />
             <Work />
             <Cta/>
             <Footer />
-        </div>
+        </>
     )
 }
 
