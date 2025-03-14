@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
-import axios from 'axios';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import Notiflix from 'notiflix';
 
 const Contact = () => {
-    useDocTitle('MLD | Molad e Konsult - Send us a message')
+    useDocTitle('D A C | Dev Alliance Company - Send us a message')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -31,48 +30,44 @@ const Contact = () => {
         e.preventDefault();
         document.getElementById('submitBtn').disabled = true;
         document.getElementById('submitBtn').innerHTML = 'Loading...';
-        let fData = new FormData();
-        fData.append('first_name', firstName)
-        fData.append('last_name', lastName)
-        fData.append('email', email)
-        fData.append('phone_number', phone)
-        fData.append('message', message)
+        const templateParams = {
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone_number: phone,
+            message: message,
+        }
 
-        axios({
-            method: "post",
-            url: process.env.REACT_APP_CONTACT_API,
-            data: fData,
-            headers: {
-                'Content-Type':  'multipart/form-data'
-            }
-        })
-        .then(function (response) {
+        console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+        console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+        console.log('User ID:', process.env.REACT_APP_EMAILJS_USER_ID);
+
+        emailjs.send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            templateParams,
+            process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then((response) => {
             document.getElementById('submitBtn').disabled = false;
             document.getElementById('submitBtn').innerHTML = 'send message';
-            clearInput()
+            clearInput();
             //handle success
             Notiflix.Report.success(
                 'Success',
-                response.data.message,
+                response,
                 'Okay',
             );
         })
-        .catch(function (error) {
+        .catch((error) => {
             document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').innerHTML = 'send message';
-            //handle error
-            const { response } = error;
-            if(response.status === 500) {
-                Notiflix.Report.failure(
-                    'An error occurred',
-                    response.data.message,
-                    'Okay',
-                );
-            }
-            if(response.data.errors !== null) {
-                setErrors(response.data.errors)
-            }
-            
+            document.getElementById('submitBtn').innerHTML = 'Send Message';
+            console.error('Email sending error:', error);
+            Notiflix.Report.failure(
+                'An error occurred',
+                'Failed to send your message. Please try again later.',
+                'Okay'
+            );
         });
     }
     return (
