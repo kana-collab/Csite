@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
 
                     {/* 1st block */}
-                    <div className="col-span-1 sm:col-span-6 lg:col-span-1">
+                    <div className="col-span-1 sm:col-span-6 lg:col-span-4 mx-auto">
                         <div className="box-border p-8 bg-white-800 text-black-600 text-center rounded-lg xl:w-80 mx-auto">
                             <h3 className="font-bold text-4xl mb-4 text-blue-900">D A C</h3>
                             <div className='text-md font-medium text-blue-900'>
