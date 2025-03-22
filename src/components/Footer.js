@@ -10,7 +10,7 @@ const Footer = ({ data }) => {
                 <div className="footer max-w-full mx-auto px-4 sm:px-6 bg-gray-100 border-t border-b py-10 sm:py-30">
 
                     {/* Top area: Blocks */}
-                    <div className="grid grid-cols-3 gap-10 py-12 md:py-12 border-t border-gray-200 lg:ml-11">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-12 md:py-12 border-t border-gray-200 lg:ml-11">
                         {/* Updated col-span classes to assign each block to one column */}
 
                         {/* 1st block */}
