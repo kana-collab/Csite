@@ -36,7 +36,7 @@ const Footer = ({ data }) => {
                                 <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
                             </li>
                             <li className="mb-2">
-                                <HashLink to="#contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
+                                <a href="/contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</a>
                             </li>                            
                             </ul>
                         </div>
@@ -46,16 +46,16 @@ const Footer = ({ data }) => {
                             <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
                             <ul className="text-md">
                             <li className="mb-2">
-                                <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Web Development</HashLink>
+                                <HashLink to="/#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Web Development</HashLink>
                             </li>
                             <li className="mb-2">
-                                <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Mobile App Development</HashLink>
+                                <HashLink to="/#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Mobile App Development</HashLink>
                             </li>
                             <li className="mb-2">
-                                <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Domain and Hosting</HashLink>
+                                <HashLink to="/#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Domain and Hosting</HashLink>
                             </li>
                             <li className="mb-2">
-                                <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">General IT Consultations</HashLink>
+                                <HashLink to="/#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">General IT Consultations</HashLink>
                             </li>
                             </ul>
                         </div>
