@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Alliance - Web and Mobile Applications</title>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <!-- Add other meta tags and links here -->
+    <script>
+      // Example script to fetch and update meta tags with Bearer token
+      async function updateMetaTags() {
+        try {
+          const response = await fetch('https://api.devallianceusa.com/api/SEOs', {
+            headers: {
+              Authorization: 'Bearer 7a9c247384fbebc404f0ba8bb9e2c98821fc5b093d600b233740eb4887f826790d80ddadef0974d899de85fc2a371a9ab43f792f184f878bed6706b2059aeec675181d4944c577a128eb6c904a841120ebc22ca8cd9b1c57a237e822f63821d6f03cdb64e0b579cfe32cb94e701cc3d8d8d7b5ddc710c6f9924a0039b14b782d', // Replace with your actual token
+            },
+          });
+          const metaData = (await response.json()).data[0]; // Access the first object in the data array
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+          // Dynamically create or update meta tags
+          const title = document.querySelector('title');
+          if (metaData.Title) title.textContent = metaData.Title;
+
+          const descriptionMeta = document.createElement('meta');
+          descriptionMeta.name = 'description';
+          descriptionMeta.content = metaData.Descriptions || 'Default description';
+          document.head.appendChild(descriptionMeta);
+
+          const keywordsMeta = document.createElement('meta');
+          keywordsMeta.name = 'keywords';
+          keywordsMeta.content = metaData.Keywords || 'Default keywords';
+          document.head.appendChild(keywordsMeta);
+
+          const authorMeta = document.createElement('meta');
+          authorMeta.name = 'author';
+          authorMeta.content = metaData.Author || 'Default author';
+          document.head.appendChild(authorMeta);
+
+          const versionMeta = document.createElement('meta');
+          versionMeta.name = 'version';
+          versionMeta.content = metaData.Version || 'Default version';
+          document.head.appendChild(versionMeta);
+        } catch (error) {
+          console.error('Error fetching meta data:', error);
+        }
+      }
+
+      // Call the function to update meta tags
+      updateMetaTags();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- Add other scripts here -->
   </body>
 </html>

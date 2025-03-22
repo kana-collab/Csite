@@ -32,7 +32,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("D A C | Dev Alliance Company - Web and Mobile Applications");
+  useDocTitle("Dev Alliance - Web and Mobile Applications");
 
   return (
     <>
