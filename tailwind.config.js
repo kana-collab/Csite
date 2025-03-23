@@ -3,7 +3,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '480px', // Add extra small breakpoint for better mobile support
+      },
+    },
   },
   plugins: [],
 }

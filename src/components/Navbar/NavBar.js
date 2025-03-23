@@ -32,7 +32,7 @@ const NavBar = ({ data }) => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
                             )}
                             {!isOpen && (
-                            <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                            <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
                             )}
                         </svg>
                     </button>
@@ -40,7 +40,7 @@ const NavBar = ({ data }) => {
                         <NavLinks navdata={data.NavLinks} ctadata={data.ContactCTA}/>
                     </div>
 
-                    <div className={`fixed transition-transform duration-300 ease-in-out transit flex justify-center left-0 w-full h-auto rounded-md p-24 bg-white lg:hidden shadow-xl top-14 ${  isOpen ? "block" : "hidden" } `}>
+                    <div className={`fixed transition-transform duration-300 ease-in-out flex justify-center left-0 w-full h-auto rounded-md p-6 bg-white lg:hidden shadow-xl top-14 ${isOpen ? "block" : "hidden"}`}>
                         <div className='flex flex-col space-y-6'>
                             <NavLinks navdata={data.NavLinks} ctadata={data.ContactCTA}/>
                         </div>                                                

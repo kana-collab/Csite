@@ -33,7 +33,7 @@ const Hero = ({ heroData, headerData }) => {
                                 <div>Loading Image...</div>
                             )}
                         </div>
-                        <div className="lg:w-1/2 flex flex-col justify-center mt-4 lg:mt-0" data-aos="zoom-in" data-aos-delay="200">
+                        <div className="lg:w-1/2 flex flex-col justify-center mt-4 lg:mt-0 px-4" data-aos="zoom-in" data-aos-delay="200">
                             <h1 className="mb-5 text-2xl md:text-3xl lg:text-5xl font-bold text-blue-900">
                                 {heroData.HeroTitle || 'Default Title'}
                             </h1>

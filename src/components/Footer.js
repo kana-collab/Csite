@@ -14,14 +14,12 @@ const Footer = ({ data }) => {
                         {/* Updated col-span classes to assign each block to one column */}
 
                         {/* 1st block */}
-                        <div className="col-span-1 mx-auto">
-                            <div className="box-border p-8 bg-white-800 text-black-600 text-center rounded-lg xl:w-80 mx-auto">
-                                <h3 className="font-bold text-4xl mb-4 text-blue-900">{data.ShortCName}</h3>
-                                <div className='text-md font-medium text-blue-900'>
-                                    <h5>{data.CName}</h5>
-                                    <p>{data.PhoneNumber}</p>
-                                    <p><a href="mailto:dev.alliance.company@gmail.com">{data.Email}</a></p>
-                                </div>
+                        <div className="col-span-1 mx-auto text-center md:text-left">
+                            <h3 className="font-bold text-4xl mb-4 text-blue-900">{data.ShortCName}</h3>
+                            <div className='text-md font-medium text-blue-900'>
+                                <h5>{data.CName}</h5>
+                                <p>{data.PhoneNumber}</p>
+                                <p><a href="mailto:dev.alliance.company@gmail.com">{data.Email}</a></p>
                             </div>
                         </div>
 
