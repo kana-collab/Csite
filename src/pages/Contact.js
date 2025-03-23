@@ -151,9 +151,10 @@ const Contact = () => {
             clearInput();
             Notiflix.Report.success(
                 'Success',
-                'Your message has been sent successfully!',
+                '“Strive not to be a success, but rather to be of value.” - Albert Einstein',
                 'Okay'
             );
+            
         }
 
         document.getElementById('submitBtn').disabled = false;
