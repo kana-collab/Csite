@@ -2,8 +2,6 @@ import React from 'react';
 
 const Work = ({ data, worktitle }) => {
 
-    const DAC_URL = process.env.REACT_APP_DAC_APP_URL;
-
     return (
         <>
             <div className="my-4 py-4" id='ourworks'>

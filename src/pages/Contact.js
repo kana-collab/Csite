@@ -53,7 +53,7 @@ const Contact = () => {
             }
         };
         fetchData();
-    },[]);
+    }, [apiUrl, token]);
 
     if (!data) return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -75,7 +75,7 @@ const Contact = () => {
 
     const sendEmail = async (templateParams) => {
         try {
-            const emailResponse = await emailjs.send(
+            await emailjs.send(
                 process.env.REACT_APP_EMAILJS_SERVICE_ID,
                 process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 templateParams,
@@ -96,7 +96,7 @@ const Contact = () => {
     const sendPOSTData = async (data) => {
         try {
             if (formurl && token) {
-                const apiResponse = await axios.post(
+                await axios.post(
                     formurl,
                     data,
                     {

@@ -12,7 +12,6 @@ import { CircularProgress } from '@mui/material'; // Import a preloader componen
 
 const Home = () => {
     const [data, setData] = useState(null);
-    const [metadata, setMetadata] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -30,7 +29,6 @@ const Home = () => {
                     },
                 });
                 setData(response.data.data);
-                setMetadata(response.data.meta);
             } catch (error) {
                 console.error('Error fetching data from Strapi:', error.message);
             }

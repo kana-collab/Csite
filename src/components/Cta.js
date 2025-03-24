@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 const Cta = ({ data }) => {
 
-    const DAC_URL = process.env.REACT_APP_DAC_APP_URL;
+    
 
     return ( 
         <div className="w-full flex items-center justify-center text-white cta">
