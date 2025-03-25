@@ -23,9 +23,10 @@ const Home = () => {
                     throw new Error('API URL or Token is missing. Please check your .env file.');
                 }
 
-                const response = await axios.get(`${apiUrl}?_=${new Date().getTime()}`, {
+                const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${token}`,
+                        "Cache-Control": "no-cache",
                     },
                     withCredentials: true,
                 });
