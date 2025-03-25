@@ -17,14 +17,13 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 const apiUrl = `process.env.REACT_APP_STRAPI_API_URL`
-                const token = process.env.REACT_APP_API_TOKEN;
-                const homeurl = `${apiUrl}?_=${new Date().getTime()}`
+                const token = process.env.REACT_APP_API_TOKEN; 
 
-                if (!homeurl || !token) {
+                if (!apiUrl || !token) {
                     throw new Error('API URL or Token is missing. Please check your .env file.');
                 }
 
-                const response = await axios.get(homeurl, {
+                const response = await axios.get(`${apiUrl}?_=${new Date().getTime()}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
