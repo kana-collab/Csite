@@ -26,7 +26,7 @@ const Contact = () => {
         const fetchData = async () => {
             try {
 
-                if (!contacturl || !token) {
+                if (!apiUrl || !token) {
                     console.error('Environment variables are not properly loaded. Please check your .env file.');
                     Notiflix.Report.failure(
                         'Configuration Error',
