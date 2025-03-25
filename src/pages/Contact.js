@@ -20,7 +20,6 @@ const Contact = () => {
     const apiUrl = process.env.REACT_APP_API_CONTACT_URL
     const formurl = process.env.REACT_APP_API_POST_FORM_URL || null;
     const token = process.env.REACT_APP_API_TOKEN || null;
-    const contacturl = `${apiurl}?_=${new Date().getTime()}`
     
 
     useEffect(() => {
@@ -37,7 +36,7 @@ const Contact = () => {
                     return;
                 }
 
-                const response = await axios.get(contacturl, {
+                const response = await axios.get(`${apiurl}?_=${new Date().getTime()}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
