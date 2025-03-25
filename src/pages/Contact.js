@@ -41,6 +41,7 @@ const Contact = () => {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
+                    withCredentials: true,
                 });
                 setData(response.data.data);
             } catch (error) {
@@ -103,6 +104,7 @@ const Contact = () => {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
+                        withCredentials: true,
                     }
                 );
                 return true;
