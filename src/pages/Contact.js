@@ -17,17 +17,17 @@ const Contact = () => {
     const [errors, setErrors] = useState([])
 
     const [data, setData] = useState(null);
-    const apiUrl = process.env.REACT_APP_API_CONTACT_URL || null;
+    const apiUrl = process.env.REACT_APP_API_CONTACT_URL
     const formurl = process.env.REACT_APP_API_POST_FORM_URL || null;
     const token = process.env.REACT_APP_API_TOKEN || null;
-
+    const contacturl = `${apiurl}?_=${new Date().getTime()}`
     
 
     useEffect(() => {
         const fetchData = async () => {
             try {
 
-                if (!apiUrl || !token) {
+                if (!contacturl || !token) {
                     console.error('Environment variables are not properly loaded. Please check your .env file.');
                     Notiflix.Report.failure(
                         'Configuration Error',
@@ -37,7 +37,7 @@ const Contact = () => {
                     return;
                 }
 
-                const response = await axios.get(apiUrl, {
+                const response = await axios.get(contacturl, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
