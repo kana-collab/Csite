@@ -20,11 +20,11 @@ const Home = () => {
                 const token = process.env.REACT_APP_API_TOKEN;
                 const homeurl = `${apiUrl}?_=${new Date().getTime()}`
 
-                if (!apiUrl || !token) {
+                if (!homeurl || !token) {
                     throw new Error('API URL or Token is missing. Please check your .env file.');
                 }
 
-                const response = await axios.get(apiUrl, {
+                const response = await axios.get(homeurl, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
