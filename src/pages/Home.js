@@ -46,12 +46,12 @@ const Home = () => {
 
     return (
         <>
-            <Hero heroData={data?.Hero || {}} headerData={data?.Header || {}} />
-            <Intro data={data?.Story || {}} />
-            <Services data={data?.Services || {}} />
-            <Work data={data?.Workcard || {}} worktitle={data.worktitle}/>
-            <Cta data={data?.CTA || {}} />
-            <Footer data={data?.Footer || {}} />
+            <Hero heroData={data.Hero} headerData={data.Header} />
+            <Intro data={data.Story} />
+            <Services data={data.Services} />
+            <Work data={data.Workcard} worktitle={data.worktitle}/>
+            <Cta data={data.CTA} />
+            <Footer data={data.Footer} />
         </>
     );
 };
