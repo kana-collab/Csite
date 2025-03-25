@@ -27,6 +27,7 @@ const Home = () => {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
+                    withCredentials: true,
                 });
                 setData(response.data.data);
             } catch (error) {
