@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = `process.env.REACT_APP_STRAPI_API_URL`
+                const apiUrl = process.env.REACT_APP_STRAPI_API_URL
                 const token = process.env.REACT_APP_API_TOKEN; 
 
                 if (!apiUrl || !token) {
