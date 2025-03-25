@@ -36,10 +36,9 @@ const Contact = () => {
                     return;
                 }
 
-                const response = await axios.get(apiUrl, {
+                const response = await axios.get(`${apiUrl}?=${new Date().getTime()}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
-                        "Cache-Control": "no-cache",
                     },
                     withCredentials: true,
                 });
