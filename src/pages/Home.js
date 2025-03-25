@@ -16,8 +16,9 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = `process.env.REACT_APP_STRAPI_API_URL?_=${new Date().getTime()}`
+                const apiUrl = `process.env.REACT_APP_STRAPI_API_URL`
                 const token = process.env.REACT_APP_API_TOKEN;
+                const homeurl = `${apiUrl}?_=${new Date().getTime()}`
 
                 if (!apiUrl || !token) {
                     throw new Error('API URL or Token is missing. Please check your .env file.');
