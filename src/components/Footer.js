@@ -34,7 +34,10 @@ const Footer = ({ data }) => {
                             </li>
                             <li className="mb-2">
                                 <a href="/contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</a>
-                            </li>                            
+                            </li>
+                            <li className="mb-2">
+                                <a href="/privacypolicy.html" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Privacy Policy</a>
+                            </li>
                             </ul>
                         </div>
 
