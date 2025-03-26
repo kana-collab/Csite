@@ -36,7 +36,7 @@ const Footer = ({ data }) => {
                                 <a href="/contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</a>
                             </li>
                             <li className="mb-2">
-                                <a href="/privacypolicy.html" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Privacy Policy</a>
+                                <a href="/privacypolicy.html" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out" target="_blank" rel="noopener noreferrer" >Privacy Policy</a>
                             </li>
                             </ul>
                         </div>
